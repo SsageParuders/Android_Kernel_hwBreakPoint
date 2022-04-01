@@ -22,4 +22,20 @@ And Update By SsageParuders
 
 ## About Client
 
+1. Download Visual Studio And download MFC dependence , such as:<br>
+    ![](./res/MFC.png)
+
+2. Just build it
+
+## How To Use
+
+1. Start Kernel_hwBP_Server on Android:<br>
+```bash
+# adb shell
+cd /data/local/tmp && chmod +x Kernel_hwBP_Server && ./Kernel_hwBP_Server
+```
+
+2. Add IP And Port for Client:<br>
+    ![](./res/Client.png)
+
 ---

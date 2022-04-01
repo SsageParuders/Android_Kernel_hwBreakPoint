@@ -1,4 +1,4 @@
-CONFIG_MODULE_SIG=n # ?????
+CONFIG_MODULE_SIG=n # 不签名模块
 KBUILD_EXTRA_SYMBOLS=/home/ssage/Desktop/MiKernel/Modules/Mi_10_U_Res/Module.symvers # ??symbols?crc
 
 MODULE_NAME := hwBreakpointProc
