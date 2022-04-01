@@ -23,19 +23,16 @@
 #include "cvector.h"
 #include "proc.h"
 #include "ver_control.h"
-
 //////////////////////////////////////////////////////////////////
-
 #define MAJOR_NUM 100
 #define IOCTL_OPEN_PROCESS 							_IOR(MAJOR_NUM, 1, char*) //打开进程
 #define IOCTL_CLOSE_HANDLE 							_IOR(MAJOR_NUM, 2, char*) //关闭进程
 #define IOCTL_GET_NUM_BRPS 							_IOR(MAJOR_NUM, 3, char*) //获取CPU支持硬件执行断点的数量
 #define IOCTL_GET_NUM_WRPS 							_IOR(MAJOR_NUM, 4, char*) //获取CPU支持硬件访问断点的数量
-#define IOCTL_SET_HWBP_HIT_CONDITIONS		_IOR(MAJOR_NUM, 5, char*) //设置硬件断点命中记录条件
-#define IOCTL_ADD_PROCESS_HWBP					_IOR(MAJOR_NUM, 6, char*) //设置进程硬件断点
-#define IOCTL_DEL_PROCESS_HWBP					_IOR(MAJOR_NUM, 7, char*) //删除进程硬件断点
-#define IOCTL_GET_HWBP_HIT_ADDR_COUNT	_IOR(MAJOR_NUM, 8, char*) //获取硬件断点命中地址数量
-
+#define IOCTL_SET_HWBP_HIT_CONDITIONS				_IOR(MAJOR_NUM, 5, char*) //设置硬件断点命中记录条件
+#define IOCTL_ADD_PROCESS_HWBP						_IOR(MAJOR_NUM, 6, char*) //设置进程硬件断点
+#define IOCTL_DEL_PROCESS_HWBP						_IOR(MAJOR_NUM, 7, char*) //删除进程硬件断点
+#define IOCTL_GET_HWBP_HIT_ADDR_COUNT				_IOR(MAJOR_NUM, 8, char*) //获取硬件断点命中地址数量
 //////////////////////////////////////////////////////////////////
 static int g_hwBreakpointProc_major = 0; //记录动态申请的主设备号
 static dev_t g_hwBreakpointProc_devno;
@@ -48,20 +45,16 @@ struct hwBreakpointProcDev {
 static struct hwBreakpointProcDev *g_hwBreakpointProc_devp; //创建的cdev设备结构
 static struct class *g_Class_devp; //创建的设备类
 
-
-
-
 //全局储存硬件断点句柄数组
 static cvector g_vHwBpHandle;
-
 
 // static struct HIT_INFO { // FIXME
 struct HIT_INFO {
 	size_t hit_addr; //命中地址
 	size_t hit_count; //命中次数
 	struct pt_regs regs; //最后一次命中的寄存器数据
-
 };
+
 // static struct HW_BREAKPOINT_INFO { // FIXMR
 struct HW_BREAKPOINT_INFO {
 	struct perf_event * sample_hbp; //硬断句柄
@@ -70,9 +63,6 @@ struct HW_BREAKPOINT_INFO {
 //全局储存硬件断点命中信息数组
 static cvector g_vHwBpInfo;
 static struct semaphore g_lockHwBpInfoSem;
-
-
-
 
 #pragma pack(1)
 // static struct HIT_CONDITIONS { // FIXME
@@ -93,7 +83,6 @@ struct HIT_CONDITIONS {
 #pragma pack()
 //全局硬件断点命中记录条件
 static struct HIT_CONDITIONS g_hwBpHitConditions = { }; // {0} // FIXME
-
 
 static int hwBreakpointProc_open(struct inode *inode, struct file *filp) {
 	//将设备结构体指针赋值给文件私有数据指针
@@ -287,7 +276,6 @@ static void sample_hbp_handler(struct perf_event *bp,
 			return;
 		}
 	}
-
 
 	//开始记录硬件断点命中情况
 	down(&g_lockHwBpInfoSem);
@@ -536,9 +524,6 @@ static long hwBreakpointProc_ioctl(
 		memcpy(&hwBreakpoint_type, (void*)((size_t)buf + (size_t)24), sizeof(hwBreakpoint_type));
 		printk_debug(KERN_INFO "hwBreakpoint_type:%d\n", hwBreakpoint_type);
 
-
-
-
 		task = get_pid_task(proc_pid_struct, PIDTYPE_PID);
 		if (!task) {
 			printk_debug(KERN_INFO "get_pid_task failed.\n");
@@ -674,8 +659,6 @@ static int hwBreakpointProc_release(struct inode *inode, struct file *filp) {
 	return 0;
 }
 
-
-
 static const struct file_operations hwBreakpointProc_fops =
 {
   .owner = THIS_MODULE,
@@ -787,7 +770,6 @@ static void __exit hwBreakpointProc_dev_exit(void) {
 	printk(KERN_EMERG "Goodbye, %s\n", DEV_FILENAME);
 
 }
-
 
 #ifdef CONFIG_MODULE_GUIDE_ENTRY
 module_init(hwBreakpointProc_dev_init);
