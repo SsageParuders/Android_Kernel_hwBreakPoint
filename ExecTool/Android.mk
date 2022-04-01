@@ -6,7 +6,7 @@ LOCAL_PATH := $(call my-dir) # 定义 local path 只需一次即可
 
 include $(CLEAR_VARS) # 声明 CLEAR_VARS 变量
 
-LOCAL_MODULE := Kernel_hwBP_exec # 设定模块名称
+LOCAL_MODULE := Kernel_hwBP_Exec # 设定模块名称
 
 LOCAL_CPPFLAGS += -std=c++1y
 LOCAL_CFLAGS += -fPIE
