@@ -291,325 +291,336 @@ HCURSOR CtestHwBpClientDlg::OnQueryDragIcon() {
 
 
 void CtestHwBpClientDlg::GetUserHitConditions(HIT_CONDITIONS & hitConditions) {
+	std::stringstream ssConvert;
 	if (m_checkbox_x0) {
-		std::wstringstream ssConvert; ssConvert << m_edit_x0.GetString();
+		ssConvert << ws2s(m_edit_x0.GetBuffer(0));
+
 		hitConditions.enable_regs[0] = '\x01';
 		ssConvert >> std::hex >> hitConditions.regs.regs[0];
 	}
 	if (m_checkbox_x1) {
-		std::wstringstream ssConvert;
-		ssConvert << m_edit_x1.GetString();
+		ssConvert.clear();
+		ssConvert.str("");
+		ssConvert << ws2s(m_edit_x1.GetBuffer(0));
 
 		hitConditions.enable_regs[1] = '\x01';
 		ssConvert >> std::hex >> hitConditions.regs.regs[1];
 	}
 	if (m_checkbox_x1) {
-		std::wstringstream ssConvert;
-		ssConvert << m_edit_x1.GetString();
+		ssConvert.clear();
+		ssConvert.str("");
+		ssConvert << ws2s(m_edit_x1.GetBuffer(0));
 
 		hitConditions.enable_regs[1] = '\x01';
 		ssConvert >> std::hex >> hitConditions.regs.regs[1];
 	}
 	if (m_checkbox_x2) {
-		std::wstringstream ssConvert;
-		ssConvert << m_edit_x2.GetString();
+		ssConvert.clear();
+		ssConvert.str("");
+		ssConvert << ws2s(m_edit_x2.GetBuffer(0));
 
 		hitConditions.enable_regs[2] = '\x01';
 		ssConvert >> std::hex >> hitConditions.regs.regs[2];
 	}
 	if (m_checkbox_x3) {
-		std::wstringstream ssConvert;
-		ssConvert << m_edit_x3.GetString();
+		ssConvert.clear();
+		ssConvert.str("");
+		ssConvert << ws2s(m_edit_x3.GetBuffer(0));
 
 		hitConditions.enable_regs[3] = '\x01';
 		ssConvert >> std::hex >> hitConditions.regs.regs[3];
 	}
 	if (m_checkbox_x4) {
-		std::wstringstream ssConvert;
-		ssConvert << m_edit_x4.GetString();
+		ssConvert.clear();
+		ssConvert.str("");
+		ssConvert << ws2s(m_edit_x4.GetBuffer(0));
 
 		hitConditions.enable_regs[4] = '\x01';
 		ssConvert >> std::hex >> hitConditions.regs.regs[4];
 	}
 	if (m_checkbox_x5) {
-		std::wstringstream ssConvert;
-		ssConvert << m_edit_x4.GetString();
+		ssConvert.clear();
+		ssConvert.str("");
+		ssConvert << ws2s(m_edit_x4.GetBuffer(0));
 
 		hitConditions.enable_regs[5] = '\x01';
 		ssConvert >> std::hex >> hitConditions.regs.regs[5];
 	}
 	if (m_checkbox_x6) {
-		std::wstringstream ssConvert;
-		ssConvert << m_edit_x6.GetString();
+		ssConvert.clear();
+		ssConvert.str("");
+		ssConvert << ws2s(m_edit_x6.GetBuffer(0));
 
 		hitConditions.enable_regs[6] = '\x01';
 		ssConvert >> std::hex >> hitConditions.regs.regs[6];
 	}
 	if (m_checkbox_x7) {
-		std::wstringstream ssConvert;
-		ssConvert << m_edit_x7.GetString();
+		ssConvert.clear();
+		ssConvert.str("");
+		ssConvert << ws2s(m_edit_x7.GetBuffer(0));
 
 		hitConditions.enable_regs[7] = '\x01';
 		ssConvert >> std::hex >> hitConditions.regs.regs[7];
 	}
 	if (m_checkbox_x8) {
-		std::wstringstream ssConvert;
-		ssConvert << m_edit_x8.GetString();
+		ssConvert.clear();
+		ssConvert.str("");
+		ssConvert << ws2s(m_edit_x8.GetBuffer(0));
 
 		hitConditions.enable_regs[8] = '\x01';
 		ssConvert >> std::hex >> hitConditions.regs.regs[8];
 	}
 	if (m_checkbox_x9) {
-		std::wstringstream ssConvert;
-		ssConvert << m_edit_x9.GetString();
+		ssConvert.clear();
+		ssConvert.str("");
+		ssConvert << ws2s(m_edit_x9.GetBuffer(0));
 
 		hitConditions.enable_regs[9] = '\x01';
 		ssConvert >> std::hex >> hitConditions.regs.regs[9];
 	}
 	if (m_checkbox_x10) {
-		std::wstringstream ssConvert;
-		ssConvert << m_edit_x10.GetString();
+		ssConvert.clear();
+		ssConvert.str("");
+		ssConvert << ws2s(m_edit_x10.GetBuffer(0));
 
 		hitConditions.enable_regs[10] = '\x01';
 		ssConvert >> std::hex >> hitConditions.regs.regs[10];
 	}
 	if (m_checkbox_x11) {
-		std::wstringstream ssConvert;
-		ssConvert << m_edit_x11.GetString();
+		ssConvert.clear();
+		ssConvert.str("");
+		ssConvert << ws2s(m_edit_x11.GetBuffer(0));
 
 		hitConditions.enable_regs[11] = '\x01';
 		ssConvert >> std::hex >> hitConditions.regs.regs[11];
 	}
 	if (m_checkbox_x12) {
-		std::wstringstream ssConvert;
-		ssConvert << m_edit_x12.GetString();
+		ssConvert.clear();
+		ssConvert.str("");
+		ssConvert << ws2s(m_edit_x12.GetBuffer(0));
 
 		hitConditions.enable_regs[12] = '\x01';
 		ssConvert >> std::hex >> hitConditions.regs.regs[12];
 	}
 	if (m_checkbox_x13) {
-		std::wstringstream ssConvert;
-		ssConvert << m_edit_x13.GetString();
+		ssConvert.clear();
+		ssConvert.str("");
+		ssConvert << ws2s(m_edit_x13.GetBuffer(0));
 
 		hitConditions.enable_regs[13] = '\x01';
 		ssConvert >> std::hex >> hitConditions.regs.regs[13];
 	}
 	if (m_checkbox_x14) {
-		std::wstringstream ssConvert;
-		ssConvert << m_edit_x14.GetString();
+		ssConvert.clear();
+		ssConvert.str("");
+		ssConvert << ws2s(m_edit_x14.GetBuffer(0));
 
 		hitConditions.enable_regs[14] = '\x01';
 		ssConvert >> std::hex >> hitConditions.regs.regs[14];
 	}
 	if (m_checkbox_x15) {
-		std::wstringstream ssConvert;
-		ssConvert << m_edit_x15.GetString();
+		ssConvert.clear();
+		ssConvert.str("");
+		ssConvert << ws2s(m_edit_x15.GetBuffer(0));
 
 		hitConditions.enable_regs[15] = '\x01';
 		ssConvert >> std::hex >> hitConditions.regs.regs[15];
 	}
 	if (m_checkbox_x16) {
-		std::wstringstream ssConvert;
-		ssConvert << m_edit_x16.GetString();
+		ssConvert.clear();
+		ssConvert.str("");
+		ssConvert << ws2s(m_edit_x16.GetBuffer(0));
 
 		hitConditions.enable_regs[16] = '\x01';
 		ssConvert >> std::hex >> hitConditions.regs.regs[16];
 	}
 	if (m_checkbox_x17) {
-		std::wstringstream ssConvert;
-		ssConvert << m_edit_x17.GetString();
+		ssConvert.clear();
+		ssConvert.str("");
+		ssConvert << ws2s(m_edit_x17.GetBuffer(0));
 
 		hitConditions.enable_regs[17] = '\x01';
 		ssConvert >> std::hex >> hitConditions.regs.regs[17];
 	}
 	if (m_checkbox_x18) {
-		std::wstringstream ssConvert;
-		ssConvert << m_edit_x18.GetString();
+		ssConvert.clear();
+		ssConvert.str("");
+		ssConvert << ws2s(m_edit_x18.GetBuffer(0));
 
 		hitConditions.enable_regs[18] = '\x01';
 		ssConvert >> std::hex >> hitConditions.regs.regs[18];
 	}
 	if (m_checkbox_x19) {
-		std::wstringstream ssConvert;
-		ssConvert << m_edit_x19.GetString();
+		ssConvert.clear();
+		ssConvert.str("");
+		ssConvert << ws2s(m_edit_x19.GetBuffer(0));
 
 		hitConditions.enable_regs[19] = '\x01';
 		ssConvert >> std::hex >> hitConditions.regs.regs[19];
 	}
 	if (m_checkbox_x20) {
-		std::wstringstream ssConvert;
-		ssConvert << m_edit_x20.GetString();
+		ssConvert.clear();
+		ssConvert.str("");
+		ssConvert << ws2s(m_edit_x20.GetBuffer(0));
 
 		hitConditions.enable_regs[20] = '\x01';
 		ssConvert >> std::hex >> hitConditions.regs.regs[20];
 	}
 	if (m_checkbox_x21) {
-		std::wstringstream ssConvert;
-		ssConvert << m_edit_x21.GetString();
+		ssConvert.clear();
+		ssConvert.str("");
+		ssConvert << ws2s(m_edit_x21.GetBuffer(0));
 
 		hitConditions.enable_regs[21] = '\x01';
 		ssConvert >> std::hex >> hitConditions.regs.regs[21];
 	}
 	if (m_checkbox_x22) {
-		std::wstringstream ssConvert;
-		ssConvert << m_edit_x22.GetString();
+		ssConvert.clear();
+		ssConvert.str("");
+		ssConvert << ws2s(m_edit_x22.GetBuffer(0));
 
 		hitConditions.enable_regs[22] = '\x01';
 		ssConvert >> std::hex >> hitConditions.regs.regs[22];
 	}
 	if (m_checkbox_x23) {
-		std::wstringstream ssConvert;
-		ssConvert << m_edit_x23.GetString();
+		ssConvert.clear();
+		ssConvert.str("");
+		ssConvert << ws2s(m_edit_x23.GetBuffer(0));
 
 		hitConditions.enable_regs[23] = '\x01';
 		ssConvert >> std::hex >> hitConditions.regs.regs[23];
 	}
 	if (m_checkbox_x24) {
-		std::wstringstream ssConvert;
-		ssConvert << m_edit_x24.GetString();
+		ssConvert.clear();
+		ssConvert.str("");
+		ssConvert << ws2s(m_edit_x24.GetBuffer(0));
 
 		hitConditions.enable_regs[24] = '\x01';
 		ssConvert >> std::hex >> hitConditions.regs.regs[24];
 	}
 	if (m_checkbox_x25) {
-		std::wstringstream ssConvert;
-		ssConvert << m_edit_x25.GetString();
+		ssConvert.clear();
+		ssConvert.str("");
+		ssConvert << ws2s(m_edit_x25.GetBuffer(0));
 
 		hitConditions.enable_regs[25] = '\x01';
 		ssConvert >> std::hex >> hitConditions.regs.regs[25];
 	}
 	if (m_checkbox_x26) {
-		std::wstringstream ssConvert;
-		ssConvert << m_edit_x26.GetString();
+		ssConvert.clear();
+		ssConvert.str("");
+		ssConvert << ws2s(m_edit_x26.GetBuffer(0));
 
 		hitConditions.enable_regs[26] = '\x01';
 		ssConvert >> std::hex >> hitConditions.regs.regs[26];
 	}
 	if (m_checkbox_x27) {
-		std::wstringstream ssConvert;
-		ssConvert << m_edit_x27.GetString();
+		ssConvert.clear();
+		ssConvert.str("");
+		ssConvert << ws2s(m_edit_x27.GetBuffer(0));
 
 		hitConditions.enable_regs[27] = '\x01';
 		ssConvert >> std::hex >> hitConditions.regs.regs[27];
 	}
 	if (m_checkbox_x28) {
-		std::wstringstream ssConvert;
-		ssConvert << m_edit_x28.GetString();
+		ssConvert.clear();
+		ssConvert.str("");
+		ssConvert << ws2s(m_edit_x28.GetBuffer(0));
 
 		hitConditions.enable_regs[28] = '\x01';
 		ssConvert >> std::hex >> hitConditions.regs.regs[28];
 	}
 	if (m_checkbox_x29) {
-		std::wstringstream ssConvert;
-		ssConvert << m_edit_x29.GetString();
+		ssConvert.clear();
+		ssConvert.str("");
+		ssConvert << ws2s(m_edit_x29.GetBuffer(0));
 
 		hitConditions.enable_regs[29] = '\x01';
 		ssConvert >> std::hex >> hitConditions.regs.regs[29];
 	}
 	if (m_checkbox_x30) {
-		std::wstringstream ssConvert;
-		ssConvert << m_edit_x30.GetString();
+		ssConvert.clear();
+		ssConvert.str("");
+		ssConvert << ws2s(m_edit_x30.GetBuffer(0));
 
 		hitConditions.enable_regs[30] = '\x01';
 		ssConvert >> std::hex >> hitConditions.regs.regs[30];
 	}
 	if (m_checkbox_sp) {
-		std::wstringstream ssConvert;
-		ssConvert << m_edit_sp.GetString();
+		ssConvert.clear();
+		ssConvert.str("");
+		ssConvert << ws2s(m_edit_sp.GetBuffer(0));
 
 		hitConditions.enable_sp = '\x01';
 		ssConvert >> std::hex >> hitConditions.regs.sp;
 	}
 	if (m_checkbox_pc) {
-		std::wstringstream ssConvert;
-		ssConvert << m_edit_pc.GetString();
+		ssConvert.clear();
+		ssConvert.str("");
+		ssConvert << ws2s(m_edit_pc.GetBuffer(0));
 
 		hitConditions.enable_pc = '\x01';
 		ssConvert >> std::hex >> hitConditions.regs.pc;
 	}
 	if (m_checkbox_pstate) {
-		std::wstringstream ssConvert;
-		ssConvert << m_edit_pstate.GetString();
+		ssConvert.clear();
+		ssConvert.str("");
+		ssConvert << ws2s(m_edit_pstate.GetBuffer(0));
 
 		hitConditions.enable_pstate = '\x01';
 		ssConvert >> std::hex >> hitConditions.regs.pstate;
 	}
 	if (m_checkbox_orig_x0) {
-		std::wstringstream ssConvert;
-		ssConvert << m_edit_orig_x0.GetString();
+		ssConvert.clear();
+		ssConvert.str("");
+		ssConvert << ws2s(m_edit_orig_x0.GetBuffer(0));
 
 		hitConditions.enable_orig_x0 = '\x01';
 		ssConvert >> std::hex >> hitConditions.regs.orig_x0;
 	}
 	if (m_checkbox_syscallno) {
-		std::wstringstream ssConvert;
-		ssConvert << m_edit_syscallno.GetString();
+		ssConvert.clear();
+		ssConvert.str("");
+		ssConvert << ws2s(m_edit_syscallno.GetBuffer(0));
 
 		hitConditions.enable_syscallno = '\x01';
 		ssConvert >> std::hex >> hitConditions.regs.syscallno;
 	}
 }
-int CtestHwBpClientDlg::GetInputPid() {
+
+void CtestHwBpClientDlg::OnBnClickedButtonAddHwbp() {
 	UpdateData(TRUE);
-	std::wstringstream ssConvert;
-	ssConvert << m_edit_pid.GetString();
+
+	if (m_edit_pid.IsEmpty() || m_edit_addr.IsEmpty() || m_edit_keep_time.IsEmpty()) {
+		MessageBox(L"所填参数不能为空");
+		return;
+	}
+
 	int pid = 0;
+	std::stringstream ssConvert;
+
+	ssConvert << ws2s(m_edit_pid.GetBuffer(0));
 	if (m_checkbox_pid_hex) {
 		ssConvert >> std::hex >> pid;
 	} else {
 		ssConvert >> pid;
 	}
-	return pid;
-}
-UINT64 CtestHwBpClientDlg::GetInputAddress() {
-	UpdateData(TRUE);
-	std::wstringstream ssConvert;
-	ssConvert << m_edit_addr.GetString();
+
+	ssConvert.clear();
+	ssConvert.str("");
+
+	ssConvert << ws2s(m_edit_addr.GetBuffer(0));
+
+
 	UINT64 address = 0;
 	if (m_checkbox_addr_hex) {
 		ssConvert >> std::hex >> address;
 	} else {
 		ssConvert >> address;
 	}
-	return address;
-}
-std::wstring CtestHwBpClientDlg::GetInputAddressString() {
-	UpdateData(TRUE);
-	std::wstringstream wssConvert;
-	if (m_checkbox_addr_hex) {
-		wssConvert << std::hex << m_edit_addr.GetString();
-	} else {
-		wssConvert << m_edit_addr.GetString();
-	}
-	std::wstring showAddr = m_edit_addr.GetString();
-	return showAddr;
-}
-uint32_t CtestHwBpClientDlg::GetInputHwBpAddrLen() {
-	UpdateData(TRUE);
-	return m_radio_len_4 == 0 ? HW_BREAKPOINT_LEN_4 : HW_BREAKPOINT_LEN_8;
-}
-uint32_t CtestHwBpClientDlg::GetInputHwBpAddrType() {
-	UpdateData(TRUE);
-	return m_radio_type_r == 0 ? HW_BREAKPOINT_R : m_radio_type_r == 1 ? HW_BREAKPOINT_W : m_radio_type_r == 2 ? HW_BREAKPOINT_RW : HW_BREAKPOINT_X;
-}
-uint32_t CtestHwBpClientDlg::GetInputHwBpKeepTimeMs() {
-	UpdateData(TRUE);
 
-	std::wstringstream ssConvert;
-	uint32_t hwBpKeepTimeMs = 0;
-	ssConvert << m_edit_keep_time.GetString();
-	ssConvert >> hwBpKeepTimeMs;
-	return hwBpKeepTimeMs;
-}
-void CtestHwBpClientDlg::OnBnClickedButtonAddHwbp() {
-	UpdateData(TRUE);
-	if (m_edit_pid.IsEmpty() || m_edit_addr.IsEmpty() || m_edit_keep_time.IsEmpty()) {
-		MessageBox(L"所填参数不能为空");
-		return;
-	}
 
-	int pid = GetInputPid();
-	UINT64 address = GetInputAddress();
+
 	if (pid == 0 || address == 0) {
 		MessageBox(L"所填参数有错误");
 		return;
@@ -620,10 +631,14 @@ void CtestHwBpClientDlg::OnBnClickedButtonAddHwbp() {
 	}
 
 	//硬件断点类型
-	uint32_t hwBpAddrLen = GetInputHwBpAddrLen();
-	uint32_t hwBpAddrType = GetInputHwBpAddrType();
+	uint32_t hwBpAddrLen = m_radio_len_4 == 0 ? HW_BREAKPOINT_LEN_4 : HW_BREAKPOINT_LEN_8;
+	uint32_t hwBpAddrType = m_radio_type_r == 0 ? HW_BREAKPOINT_R : m_radio_type_r == 1 ? HW_BREAKPOINT_W : m_radio_type_r == 2 ? HW_BREAKPOINT_RW : HW_BREAKPOINT_X;
 	uint32_t hwBpThreadType = m_radio_region_all_thread;
-	uint32_t hwBpKeepTimeMs = GetInputHwBpKeepTimeMs();
+	uint32_t hwBpKeepTimeMs = 0;
+	ssConvert.clear();
+	ssConvert.str("");
+	ssConvert << ws2s(m_edit_keep_time.GetBuffer(0));
+	ssConvert >> hwBpKeepTimeMs;
 
 	//硬件断点命中记录条件
 	HIT_CONDITIONS hitConditions = { 0 };
@@ -633,6 +648,7 @@ void CtestHwBpClientDlg::OnBnClickedButtonAddHwbp() {
 		MessageBox(L"设置硬件断点命中记录条件失败");
 		return;
 	}
+
 
 	//开始安装硬件断点
 	uint32_t allTaskCount;
@@ -656,7 +672,13 @@ void CtestHwBpClientDlg::OnBnClickedButtonAddHwbp() {
 
 		m_list_result.InsertItem(nIndex, m_edit_pid);
 
-		std::wstring showAddr = GetInputAddressString();
+		std::wstringstream wssConvert;
+		if (m_checkbox_addr_hex) {
+			wssConvert << std::hex << m_edit_addr.GetBuffer(0);
+		} else {
+			wssConvert << m_edit_addr.GetBuffer(0);
+		}
+		std::wstring showAddr = wssConvert.str();
 		transform(showAddr.begin(), showAddr.end(), showAddr.begin(), ::toupper);
 
 		m_list_result.SetItemText(nIndex, 1, std::wstring(L"0x" + showAddr).c_str());
@@ -664,7 +686,8 @@ void CtestHwBpClientDlg::OnBnClickedButtonAddHwbp() {
 		m_list_result.SetItemText(nIndex, 3, m_radio_len_4 == 0 ? L"4" : L"8");
 		m_list_result.SetItemText(nIndex, 4, m_radio_region_all_thread == 0 ? L"ALL" : m_radio_region_all_thread == 1 ? L"MAIN" : L"OTHER");
 
-		std::wstringstream wssConvert;
+		wssConvert.clear();
+		wssConvert.str(L"");
 		wssConvert << std::hex << h.hit_addr;
 		showAddr = wssConvert.str();
 		transform(showAddr.begin(), showAddr.end(), showAddr.begin(), ::toupper);
@@ -672,14 +695,14 @@ void CtestHwBpClientDlg::OnBnClickedButtonAddHwbp() {
 		m_list_result.SetItemText(nIndex, 5, std::wstring(L"0x" + showAddr).c_str());
 
 
-		std::wstringstream ssInfoText;
-		wchar_t info[4096] = { 0 };
-		wsprintf(info, L"命中地址: 0x%llX 命中次数:%zu \r\n\r\n", h.hit_addr, h.hit_count);
+		std::stringstream ssInfoText;
+		char info[4096] = { 0 };
+		sprintf(info, "命中地址: 0x%llX 命中次数:%zu \r\n\r\n", h.hit_addr, h.hit_count);
 		ssInfoText << info;
 
 		for (int r = 0; r < 30; r += 5) {
 			memset(info, 0, sizeof(info));
-			wsprintf(info, L"X%-2d=%-12llX X%-2d=%-12llX X%-2d=%-12llX X%-2d=%-12llX X%-2d=%-12llX\r\n",
+			sprintf(info, "X%-2d=%-12llX X%-2d=%-12llX X%-2d=%-12llX X%-2d=%-12llX X%-2d=%-12llX\r\n",
 				r, h.regs.regs[r],
 				r + 1, h.regs.regs[r + 1],
 				r + 2, h.regs.regs[r + 2],
@@ -688,21 +711,21 @@ void CtestHwBpClientDlg::OnBnClickedButtonAddHwbp() {
 			ssInfoText << info;
 		}
 		memset(info, 0, sizeof(info));
-		wsprintf(info, L"\r\nLR= %-12llX SP= %-12llX PC= %-12llX\r\n\r\n",
+		sprintf(info, "\r\nLR= %-12llX SP= %-12llX PC= %-12llX\r\n\r\n",
 			h.regs.regs[30],
 			h.regs.sp,
 			h.regs.pc);
 		ssInfoText << info;
 
 		memset(info, 0, sizeof(info));
-		wsprintf(info, L"process status: %-12llX orig_x0: %-12llX\r\nsyscallno: %-12llX\r\n",
+		sprintf(info, "process status: %-12llX orig_x0: %-12llX\r\nsyscallno: %-12llX\r\n",
 			h.regs.pstate,
 			h.regs.orig_x0,
 			h.regs.syscallno);
 
 		ssInfoText << info;
 
-		m_list_result.SetItemText(nIndex, 6, ssInfoText.str().c_str());
+		m_list_result.SetItemText(nIndex, 6, s2ws(ssInfoText.str()).c_str());
 
 		//使刚刚插入的新项可见
 		m_list_result.EnsureVisible(nIndex, FALSE);
@@ -741,7 +764,7 @@ void CtestHwBpClientDlg::OnDblclkListResult(NMHDR *pNMHDR, LRESULT *pResult) {
 		std::thread td([](std::shared_ptr<std::wstring>title, std::shared_ptr<std::wstring>text)->void {
 			CTextViewDlg dlg(title->c_str(), text->c_str());
 			dlg.DoModal();
-		}, std::make_shared<std::wstring>(title.GetString()), std::make_shared<std::wstring>(text.GetString()));
+		}, std::make_shared<std::wstring>(title.GetBuffer(0)), std::make_shared<std::wstring>(text.GetBuffer(0)));
 		td.detach();
 	}
 	*pResult = 0;
